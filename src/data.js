@@ -1,9 +1,10 @@
-// estas funciones son de ejemplo
-
-export const  ejemplo= ()=> {
-  return '';
+export const  filterdata= (movies,valueFilm)=> {
+  let filmSelected = movies.filter(element => element.id == valueFilm);
+  return filmSelected;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const filterdata = (selectdirector,valueFilm)=> {
+  let selectdirector = movies.filter(element => element.id == valueFilm);
+  return selectdirector;
 };
+
