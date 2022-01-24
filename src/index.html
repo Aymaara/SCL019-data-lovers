@@ -16,9 +16,9 @@
     <div class="logo">
       <img src="imagenes/Logostudio.png" alt="home" class="Logostudio">
     </div>
-  
-  <br>
-<br>
+
+    <br>
+    <br>
     <div class="botones">
       <ul>
         <li id="home" class="home"><a>Home</a></li>
@@ -26,8 +26,8 @@
         <li id="personajes" class="personajes"><a href="#section-personaje">Personajes</a></li>
         <li id="history" class="history"><a href="#section-Historia">Historia</a></li>
 
-        <div class="buscar">
-          <input type="text" placeholder="buscar" required>
+        <div class="Buscar">
+          <input type="text" placeholder="Buscar" required>
         </div>
       </ul>
     </div>
@@ -37,67 +37,72 @@
 
     <img src="imagenes/miyasaky.jfif" alt="home" class="img1">
 
-    <div class="reseñaSG">
+    <div class="resenaSG">
       <p>"El Studio Ghibli (スタジオジブリ Sutajio Jiburi) es un estudio de animación japonés, con sede en Tokio. Fue fundada
         en 1985 por Hayao Miyazaki y Isao Takahata, y a día de hoy,
         han realizado más de 20 películas, Debido a su popularidad, se abrió el Museo Ghibli, el cual se encuentra a
         las afueras de Tokio y para el 2022 se espera tener listo el Ghibli Park.</p>
     </div>
   </section>
+
   <main>
-    <section id="section-peliculas"><a href="#home">Películas</a>
-    
-      <select name="director" class="filter-selectores" id="director">
-        <option value="director"></option>
-        <option value="hayao">Hayao Miyazaki</option>
-        <option value="Isao">Isao Takahata</option>
-        <option value="Hiroyuki">Hiroyuki Morita</option>
-        <option value="Gorō ">Gorō Miyazaki</option>
-        <option value="Hiromasa">Hiromasa Yonebayashi</option>
-      </select>
+    <section class="section-peliculas">
+      
+        <label for="peliculas"></label><a href="#home">Peliculas</a>
+        <select class="selectFilm" id="selectFilm">
+          <option></option>
+        </select>
+      
 
-      <select name="productor" class="filter-selectores" id="productor">
-
-        <option value="productor"></option>
-        <option value="Isao">Isao Takahata</option>
-        <option value="Toru">Toru Hara</option>
-        <option value="Toshio">Toshio Suzuki</option>
-        <option value="Yoshiaki">Yoshiaki Nishimura</option>
-      </select>
-      <select name="año" class="filter-selectores" id="año">
-        <option value=""></option>
-        <option value="">1986</option>
-        <option value="">1989</option>
-        <option value="">1988</option>
-        <option value="">1991</option>
-        <option value="">1992</option>
-        <option value="">1994</option>
-        <option value="">1995</option>
-        <option value="">1997</option>
-        <option value="">2001</option>
-        <option value="">2004</option>
-        <option value="">2006</option>
-        <option value="">2008</option>
-        <option value="">2010</option>
-        <option value="">2011</option>
-        <option value="">2013</option>
-        <option value="">2014</option>
-      </select>
+  
+        <label for="director"></label>
+        <select class="selectFilm" id="selectdirector">
+          <option></option>
+        </select>
+      
     
+
+        <label for="ordenalfa"></label>
+        <select class="selectFilm" id="selectordenAZ">
+          <option></option>
+        </select>
+      
+
+        <label for="year"></label>
+        <select class="selectFilm" id="selectYear">
+          <option></option>
+        </select>
+  
     </section>
+    <br>
+    <br>
+    <article>
+      <div id="myModal" class="modal">
+        <div class="modal-content" id="TarjetaFilm">
+          <img id="TarjetaFilmPoster" src="" alt="">
+          <p class="MainDesign" id="TarjetaFilmP"></p>
+        </div>
+      </div>
+    </article>
     <section>
-    <div class="films" id="boxfilms">
-    </div>
-  </section>
-
-
-    <section id="section-personaje"><a href="#home">Personaje</a>
+      <div class="films" id="boxfilms">
+      </div>
     </section>
-    <div class="">
 
-    </div>
-    <section id="section-historia"><a href="#home">Historia</a>
+
+    <section id="section-personaje" class="filter-selectores">
+
+      <form id="DropDownpersonajes">
+        <label for="personajes"></label><a href="#home">Personajes</a>
+        <select name="selectpersonajes" id="selectpersonajes">
+          <option></option>
+        </select>
+      </form>
     </section>
+
+    <section id="section-Historia"><a href="#home">Historia</a>
+    </section>
+
   </main>
 
   <script src="main.js" type="module"></script>

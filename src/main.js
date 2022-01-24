@@ -17,13 +17,7 @@ for (let i = 0; i < movies.length; i++) {
  filterFilms[filterFilms.length] = new Option(arrayMovies.title, arrayMovies.id);
   console.log(filterFilms);
 };
-//filtro director
-for (let i = 0; i < movies.length; i++) {
-  let arrayMovies = movies[i];
-  filterdirector[filterdirector.length] = new Option(arrayMovies.director, arrayMovies.id);
-};
-  
-//filtro peliculas y extracción de información(?)
+                                                          //filtro peliculas y extracción de información(?)
 filterFilms.addEventListener('change', function () {
   let valueFilm = filterFilms.options[filterFilms.selectedIndex].value;
   let filmSelected= filterdata (movies,valueFilm)
@@ -43,12 +37,19 @@ filterFilms.addEventListener('change', function () {
   }
 });
 
+//filtro director
+//for (let i = 0; i < movies.length; i++) {
+  //let arraydirector = movies[i];
+  //filterdirector[filterdirector.length] = new Option(arraydirector.director, arraydirector.id);
+//};
+  
+
 
 // peliculas en pantalla 
 
-const img = (filterFilms, i) => {
+const img = (movies, i) => {
   return `<div>
-    <img src="${filterFilms.poster}" id="${i}" class= "listPoster"/>
+    <img src="${movies.poster}" id="${i}" class= "listPoster"/>
 </div> `;
 };
 for (let i = 0; i < movies.length; i++) {

@@ -3,8 +3,8 @@ export const  filterdata= (movies,valueFilm)=> {
   return filmSelected;
 };
 
-export const filterdata = (selectdirector,valueFilm)=> {
-  let selectdirector = movies.filter(element => element.id == valueFilm);
-  return selectdirector;
-};
+//export const filterdata = (selectdirector,)=> {
+  //let selectdirector = movies.filter(element => element.id == );
+  //return selectdirector;
+//};
 

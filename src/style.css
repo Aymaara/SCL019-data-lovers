@@ -26,6 +26,7 @@ audio {
   margin-left: 10%;
   height: 20px;
   width: 103px;
+  
 }
 .botones{ 
 
@@ -50,11 +51,11 @@ audio {
   }
   
   a:hover {
-    color: rgb(121, 147, 170);
+    color: rgb(125, 154, 180);
     transition: 0.5s;
   }
 
-.buscar input{
+.Buscar input{
   position: relative;
   width: 115%;
   height: 69%;
@@ -72,7 +73,7 @@ border-radius: 18px;
 border: 10px solid rgb(32,4, 53, 0.95);
 }
 
-.reseñaSG{
+.resenaSG{
  position: relative;
   width: 35%;
   left: 30%;
@@ -86,10 +87,10 @@ margin: 20px;
 text-align: justify;
 color: white;
 font-family: 'Noto Sans Kannada UI';
-font-size: 20px;
+font-size: 21px;
 }
 
-#section-peliculas{
+.section-peliculas{
  
   width: 78%;
   margin-left: 11%;
@@ -97,8 +98,10 @@ font-size: 20px;
   border-radius: 18px;
   margin-top: 8%;
   height:70px;
+
   
 }
+
 .films{
 
   display: flex;
@@ -112,11 +115,37 @@ font-size: 20px;
   border-radius: 18px;
   margin: 10%;
 }
-.filter-selectores{
+.selectFilm{
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
   border-radius: 10em;
   margin-left: 13%;
   margin-top: 3%;
+ 
+}
+#TarjetaFilmP.MainDesign{
+ margin: 5%;
+ color: #fff;
+ font-family: 'Noto Sans Kannada UI';
+}
 
+.modal-content{
+  background: rgb(32,4, 53, 0.95);
+  margin-left: 8%;
+  margin-right: 8%;
+  border-radius: 3em;
+  display:flex;
+  flex-direction: row;
+  
+}
+
+#TarjetaFilmPoster{
+  margin: 5%;
+  border-radius: 18px;
+  width: 27%;
+ display: flex;
+  
 }
 #section-personaje {
   width: 78%;
@@ -126,8 +155,9 @@ font-size: 20px;
   margin-top: 10%;
   height:70px;
   
+  
 }
-#section-historia{
+#section-Historia{
   width: 78%;
   margin-left: 11%;
   background: #441E62;
