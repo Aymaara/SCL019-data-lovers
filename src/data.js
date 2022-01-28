@@ -1,10 +1,7 @@
-export const  filterdata= (movies,valueFilm)=> {
-  let filmSelected = movies.filter(element => element.id == valueFilm);
-  return filmSelected;
+//crear funcion filtrar 
+ export const  filterdatadirector = (movies, filterdirector )=> {
+  let directorGhibli = movies.filter(movies => movies.director === filterdirector);
+  return directorGhibli;
 };
 
-//export const filterdata = (selectdirector,)=> {
-  //let selectdirector = movies.filter(element => element.id == );
-  //return selectdirector;
-//};
 
