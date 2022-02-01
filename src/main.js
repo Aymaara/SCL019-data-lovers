@@ -1,17 +1,9 @@
-import { filterdatadirector, sortData} from './data.js';
+import { filterdatadirector} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const movies = data.films;
 let films= movies;
 const container = document.getElementById("films.anime");
-//const  boxModal = document.getElementsByClassName("modal");
-//const filterFilms = document.getElementById("selectFilm");
-
-const filterordenAZ=document.getElementById("selectordenAZ");
-//const filteryear=document.getElementById("selectYear");
-
-
-
 const images = (movies) =>{
   return `
   <section class = "containerCard" id="${movies.id}">
@@ -33,34 +25,19 @@ boxImage(films);
 //filtro director-->
 const filterdirector= document.getElementById("selectdirector");
 const filterordenAZ= document.getElementById("selectordenAZ");
-filterdirector.addEventListener("change", (event) => {
-  let selectedDirect = filterdatadirector(movies, event.target.value,filterordenAZ.value);
-  films = selectedDirect;
+filterdirector.addEventListener("change", () => {
+  let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);
   boxImage(selectedDirect);
-  addEvents();
+ console.log(selectedDirect)
 });
 
-filterordenAZ.addEventListener("change", (event) => {
-  let selectorden = filterdatadirector(movies, event.target.value,filterordenAZ.value);
-  films = selectorden;
+//filtro orden alfabetico
+filterordenAZ.addEventListener("change", () => {
+  let selectorden = filterdatadirector(movies,filterdirector.value,filterordenAZ.value);
   boxImage(selectorden);
-  addEvents();
+ console.log(selectorden)
 });
 
+//filtro años
 
-
-/*//filtro orden
-const arraymovies  = [sortData];
-arraymovies.sort((a,b) => {a = a.toLowercase().title;
-  
-  b = b.toLowercase().title;
-  if (a > b){ 
-    return 0;
-  }
-  if (a < b){
-    return -1;
-  }
-  console.log(arraymovies);
-})
- 
-*/
+//peliculas
