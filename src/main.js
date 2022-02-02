@@ -21,10 +21,19 @@ const boxImage = (films)=>{
 };
 boxImage(films);
 
+//filtro peliculas y extracción de información(?)
+for (let i = 0; i < movies.length; i++) {
+  let arrayMovies = movies[i];
+  filterFilms[filterFilms.length] = new Option(arrayMovies.title, arrayMovies.id);
+  console.log(filterFilms);
+};
+
+
 
 //filtro director-->
 const filterdirector= document.getElementById("selectdirector");
 const filterordenAZ= document.getElementById("selectordenAZ");
+//const filterYear = document.getElementById ("release_date")
 filterdirector.addEventListener("change", () => {
   let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);
   boxImage(selectedDirect);
@@ -39,5 +48,33 @@ filterordenAZ.addEventListener("change", () => {
 });
 
 //filtro años
+//filterYear.addEventListener("change",() => {
+    //let selectYear = filterdatadirector(movies,filterdirector.value,filterordenAZ.value,filterYear.value);
+   //boxImage(selectYear);
+  //console.log(selectorYear)
+//});
+//});
 
-//peliculas
+
+
+//filtro peliculas y extracción de información(?)
+/*for (let i = 0; i < movies.length; i++) {
+  let arrayMovies = movies[i];
+  filterFilms[filterFilms.length] = new Option(arrayMovies.title, arrayMovies.id);
+   console.log(filterFilms);
+ };
+ 
+filterFilms.addEventListener('change', function () {
+  let valueFilm = filterFilms.options[filterFilms.selectedIndex].value;
+  let filmSelected= filterdata (movies,valueFilm)
+
+  for (let i = 0; i < filmSelected.length; ++i) {
+    let filmArray = filmSelected[i],
+      titleFilm = filmArray.title,
+      descriptionFilm = filmArray.description,
+      directorFilm = filmArray.director,
+      posterFilm = filmArray.poster,
+      dateFilm = filmArray.release_date,
+      rtScoreFilm = filmArray.rt_score;
+
+    document.getElementById("TarjetaFilmP").innerHTML = ("Título: " + titleFilm + "<br>" + "Descripción: " + descriptionFilm + "<br>" + "Director: " + directorFilm + "<br>" + "Año: " + dateFilm + "<br>" + rtScoreFilm);*/
