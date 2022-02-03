@@ -24,11 +24,11 @@ const boxImage = (films)=>{
 boxImage(films);
 
 //filtro peliculas y extracción de información(?)
-for (let i = 0; i < movies.length; i++) {
+/*for (let i = 0; i < movies.length; i++) {
   let arrayMovies = movies[i];
   filterFilms[filterFilms.length] = new Option(arrayMovies.title, arrayMovies.id);
   console.log(filterFilms);
-};
+};*/
 
 
 
@@ -60,8 +60,9 @@ filterxYear.addEventListener("change", () => {
  console.log(selectorYears);
 });
 
-  
 //Modal peliculas
+
+
 
 
 //const personajes = document.getElementById("films.personajes");
@@ -96,11 +97,35 @@ const modalInfoFilms = (movies) =>{
 ` 
 };
 
-const modalDataSheet = document.getElementById("modal");
-const modalinfo = (films)=>{
-   modalDataSheet.innerHTML = " ";
- films.forEach((newmovies)=>{
-  modalDataSheet.innerHTML += modalInfoFilms(newmovies);
+/*//modal
+const films = data.films_peliculas;
+let films= movies;
+const movies = document.getElementById("films_peliculas");*/
+
+/*const people = data.films;
+let selecFilm = movies;
+const personajes= document.getElementById("section-personaje");
+const imgpersonajes = (movies) =>{
+  return `
+  <section class = "section-personaje" id="${movies.id}">
+    <section class = "selecFilm">
+      <img src= "${movies.poster}" class= "poster" >
+      <p1>${movies.title}<br> ${movies.people}</p1>
+
+      </section>
+  </section>
+  `
+};
+const imagenes = (films)=>{
+  container.innerHTML = " ";
+  films.forEach((newmovies)=>{
+    container.innerHTML += imagenes(newmovies);
   })
+};
+imagenes(films);*/
+
+
+const personajes =[movies,title,people];
+let movies ={
+  id
 }
-modalinfo(films);
