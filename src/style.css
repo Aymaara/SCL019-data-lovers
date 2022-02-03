@@ -164,15 +164,53 @@ p1{
   display:flex;
   flex-direction: row;
   list-style: none; 
+  padding: 1%;
 }
 em{
-  margin: 20px;
+margin: 2%;
 text-align: justify;
 color: white;
 font-family: 'Noto Sans Kannada UI';
 font-size: 17px;
-
 }
+
+.dataPersonajes{
+ background: rgb(32,4, 53, 0.95);
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ padding: 1%;
+  align-content:space-between;
+ justify-content:flex-start;
+ border-radius: 2em ;
+}
+.imgPersonajes{
+  position: relative;
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 2em;
+  width: 10em;
+  height: 10em;  
+  align-content:space-between;
+}
+.dataUbicaciones{
+background: rgb(32,4, 53, 0.95);
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ padding: 1%;
+  align-content:space-between;
+ justify-content: space-evenly;
+ border-radius: 2em ;
+}
+.imgUbicacion {
+  display: flex;
+  border-radius: 2em;
+  width: 10em;
+  height: 10em;
+}
+
 
 /*.containerTitle {
   background-color: #7047bb;

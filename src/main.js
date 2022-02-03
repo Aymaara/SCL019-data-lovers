@@ -78,16 +78,18 @@ const modalInfoFilms = (movies) =>{
    <h><em> PERSONAJES: </em></h> 
    <div class = "dataPersonajes">
     ${movies.people.map((x) => `<img src= "${x.img}" class= "imgPersonajes"/>
-    <p1>${x.name}${x.age}<br>${x.gender}${x.space} </p1>`)};
-   </div>
-   <h><em> UBICACIONES: </em></h>
+    <p1> Nombre: ${x.name}<br> Edad: ${x.age}<br> Género: ${x.gender}<br> Especie: ${x.space} </p1>`)};
+    </div> 
+    <h><em> UBICACIONES: </em></h>
     <div class = "dataUbicaciones">
      ${movies.locations.map((x) => `<img src= "${x.img}" class= "imgUbicacion"/>
-     <p1>${x.name}/>`)};
+     <p1> Nombre: ${x.name}`)};
      </div>
-` 
+    
+`  
 };
-
+//${x.age},<br>${x.gender},${x.space}
+   
 const modalDataSheet = document.getElementById("modal");
 const modalinfo = (films)=>{
    modalDataSheet.innerHTML = " ";
