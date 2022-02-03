@@ -87,45 +87,24 @@ const modalInfoFilms = (movies) =>{
    <h><em> PERSONAJES: </em></h> 
    <div class = "dataPersonajes">
     ${movies.people.map((x) => `<img src= "${x.img}" class= "imgPersonajes"/>
-    <p1>${x.name}${x.age}<br>${x.gender}${x.space} </p1>`)};
-   </div>
-   <h><em> UBICACIONES: </em></h>
+    <p1> Nombre: ${x.name}<br> Edad: ${x.age}<br> Género: ${x.gender}<br> Especie: ${x.space} </p1>`)};
+    </div> 
+    <h><em> UBICACIONES: </em></h>
     <div class = "dataUbicaciones">
      ${movies.locations.map((x) => `<img src= "${x.img}" class= "imgUbicacion"/>
-     <p1>${x.name}/>`)};
+     <p1> Nombre: ${x.name}`)};
      </div>
-` 
+    
+`  
 };
-
-/*//modal
-const films = data.films_peliculas;
-let films= movies;
-const movies = document.getElementById("films_peliculas");*/
-
-/*const people = data.films;
-let selecFilm = movies;
-const personajes= document.getElementById("section-personaje");
-const imgpersonajes = (movies) =>{
-  return `
-  <section class = "section-personaje" id="${movies.id}">
-    <section class = "selecFilm">
-      <img src= "${movies.poster}" class= "poster" >
-      <p1>${movies.title}<br> ${movies.people}</p1>
-
-      </section>
-  </section>
-  `
-};
-const imagenes = (films)=>{
-  container.innerHTML = " ";
-  films.forEach((newmovies)=>{
-    container.innerHTML += imagenes(newmovies);
+//${x.age},<br>${x.gender},${x.space}
+   
+const modalDataSheet = document.getElementById("modal");
+const modalinfo = (films)=>{
+   modalDataSheet.innerHTML = " ";
+ films.forEach((newmovies)=>{
+  modalDataSheet.innerHTML += modalInfoFilms(newmovies);
   })
 };
-imagenes(films);*/
+imagenes(films);
 
-
-const personajes =[movies,title,people];
-let movies ={
-  id
-}
