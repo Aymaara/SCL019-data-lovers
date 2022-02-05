@@ -3,25 +3,31 @@ import data from './data/ghibli/ghibli.js';
 
 const movies = data.films;
 let films= movies;
-const container = document.getElementById("films.anime");
+
+let container = document.getElementById("films.anime");
 const images = (movies) =>{
   return `
-  <section class = "containerCard" id="${movies.id}">
+  <section class = "containerCard" id=""containerCard1"
+  
+      <section class= "filmsid" id="${movies.id}">
     <section class = "containerPoster">
-      <img src= "${movies.poster}" class= "poster" >
+      <img src= "${movies.poster}" id="myImg" class= "poster" >
       <p1>${movies.title}<br> ${movies.release_date}</p1>
-
+      </section>
       </section>
   </section>
-  `
+  
+ `
 };
+
 const boxImage = (films)=>{
   container.innerHTML = " ";
  films.forEach((newmovies)=>{
     container.innerHTML += images(newmovies);
   })
 };
-boxImage(films);
+boxImage(movies);
+
 
 
 //filtro director-->
@@ -33,11 +39,6 @@ const filterxYear = document.getElementById('selectYear');
     
 //Filtro director
 
-filterdirector.addEventListener("change", () => {
-  let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);
-  boxImage(selectedDirect);
-});
-
 //filtro orden alfabetico
 filterordenAZ.addEventListener("change", () => {
   let selectorden = filterdatadirector(movies,filterdirector.value,filterordenAZ.value);
@@ -45,25 +46,19 @@ filterordenAZ.addEventListener("change", () => {
  
 });
 
-//filtro años
-filterxYear.addEventListener("change", () => {
-  let selectorYears = filterYEar(movies, filterxYear.value);
-  boxImage(selectorYears);
- console.log(selectorYears);
-});
 
-  
+ 
 //Modal peliculas
-
-
-//const personajes = document.getElementById("films.personajes");
-
+const modalDataSheet = document.querySelector(".sheetmodal");
 
 const modalInfoFilms = (movies) =>{
   return `
- <div class= "modal-content">
+
+ <section class="modal">
+ <span class="close">&times;
+
    <div>
-    <img src= "${movies.poster}" class= "poster">
+    <img src= ${movies.poster} ${movies.id} class="modal-content">
     </div>
   <div class= "dataSheet"
    <ul class= "data_sheet">
@@ -74,7 +69,7 @@ const modalInfoFilms = (movies) =>{
      <li> <em> Reseña : ${movies.description}</em> </li>
     </ul>
  </div>
- </div>
+
    <h><em> PERSONAJES: </em></h> 
    <div class = "dataPersonajes">
     ${movies.people.map((x) => `<img src= "${x.img}" class= "imgPersonajes"/>
@@ -84,17 +79,48 @@ const modalInfoFilms = (movies) =>{
     <div class = "dataUbicaciones">
      ${movies.locations.map((x) => `<img src= "${x.img}" class= "imgUbicacion"/>
      <p1> Nombre: ${x.name}`)};
-     </div>
-    
-`  
-};
-//${x.age},<br>${x.gender},${x.space}
-   
-const modalDataSheet = document.getElementById("modal");
-const modalinfo = (films)=>{
-   modalDataSheet.innerHTML = " ";
- films.forEach((newmovies)=>{
-  modalDataSheet.innerHTML += modalInfoFilms(newmovies);
+     </div>   
+ </span>
+ </section>
+ `  };
+//
+
+const modalFilms= ()=> { 
+  
+  document.querySelectorAll(".containerCard").forEach((element, index)=> {
+    element.addEventListener("click", () => {
+      const modalCard = modalInfoFilms(films[index]);
+  
+      modalDataSheet.innerHTML = " ";
+      modalDataSheet.innerHTML=modalCard;
+      document.querySelector(".modal").style.display = 'block';
+      const close = document.getElementsByClassName("close")[0];
+      close.addEventListener("click", () => {
+          document.querySelector(".modal").style.display = 'none';
+      })
   })
+});
 }
-modalinfo(films);
+modalFilms();
+  
+filterdirector.addEventListener("change", () => {
+  let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);  
+ 
+  if(filterdirector.value=== "todas"){
+  boxImage(movies);  
+} 
+ boxImage(selectedDirect);
+films=selectedDirect;
+  modalFilms();
+  
+})
+///filtro años
+filterxYear.addEventListener("change", () => {
+  let selectorYears = filterYEar(movies, filterxYear.value);
+  films=selectorYears;
+  boxImage(selectorYears);
+  
+  modalFilms();
+  
+});
+//
