@@ -4,6 +4,7 @@ import data from './data/ghibli/ghibli.js';
 const movies = data.films;
 let films= movies;
 const container = document.getElementById("films.anime");
+//let pushCard= document.getElementsByClassName("poster");
 const images = (movies) =>{
   return `
   <section class = "containerCard" id="${movies.id}">
@@ -23,12 +24,6 @@ const boxImage = (films)=>{
 };
 boxImage(films);
 
-//filtro peliculas y extracción de información(?)
-/*for (let i = 0; i < movies.length; i++) {
-  let arrayMovies = movies[i];
-  filterFilms[filterFilms.length] = new Option(arrayMovies.title, arrayMovies.id);
-  console.log(filterFilms);
-};*/
 
 
 
@@ -44,6 +39,10 @@ const filterxYear = document.getElementById('selectYear');
 filterdirector.addEventListener("change", () => {
   let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);
   boxImage(selectedDirect);
+  if(filterdirector.value=== "todas"){
+    boxImage(movies);
+  }
+
 });
 
 //filtro orden alfabetico
@@ -59,14 +58,6 @@ filterxYear.addEventListener("change", () => {
   boxImage(selectorYears);
  console.log(selectorYears);
 });
-
-//Modal peliculas
-
-
-
-
-//const personajes = document.getElementById("films.personajes");
-
 
 const modalInfoFilms = (movies) =>{
   return `
@@ -84,7 +75,7 @@ const modalInfoFilms = (movies) =>{
     </ul>
  </div>
  </div>
-   <h><em> PERSONAJES: </em></h> 
+   
    <div class = "dataPersonajes">
     ${movies.people.map((x) => `<img src= "${x.img}" class= "imgPersonajes"/>
     <p1> Nombre: ${x.name}<br> Edad: ${x.age}<br> Género: ${x.gender}<br> Especie: ${x.space} </p1>`)};
@@ -97,7 +88,6 @@ const modalInfoFilms = (movies) =>{
     
 `  
 };
-//${x.age},<br>${x.gender},${x.space}
    
 const modalDataSheet = document.getElementById("modal");
 const modalinfo = (films)=>{
@@ -106,5 +96,5 @@ const modalinfo = (films)=>{
   modalDataSheet.innerHTML += modalInfoFilms(newmovies);
   })
 };
-imagenes(films);
+modalinfo(films);
 

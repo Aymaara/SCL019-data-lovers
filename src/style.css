@@ -116,52 +116,63 @@ p1{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 8%;
   background: rgba(32, 4, 53, 0.95);
   border: 10px solid rgb(32,4, 53, 0.95);
   border-radius: 18px;
   margin: 10%;
+  margin-top: 5%;
+  perspective: 1000px; 
+  
 }
 .selectFilm{
   border-radius: 10em;
   margin-left: 13%;
   margin-top: 3%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.containerCard {
+  margin: 2%;
+  display: flex;
+
+  
+}   
+
+.containerCard:hover {
+  background: rgb(65, 39, 78);
+  cursor: pointer;
+  transition: 1s;
+  transform: rotateY(180deg);
+  
  
 }
 
-.containerCard {
+.containerPoster{
   
-  position: relative;
-  margin: 2%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 2% #5a387e;
-  
+  backface-visibility: hidden;
 }
-
-.containerCard:hover {
-  color: rgb(125, 154, 180);
-  cursor: pointer;
-  transition: 1s;
-  transform: scale(1.1);
+/*.containerCard, .containerPoster {
+  display:flex;
+  width: 100%;
+  height: 100%;
   
-}
-
+ 
+}*/
 .poster {
-
   display: flex;
-  border-radius: 2em;
+  border-radius: 2em; 
+
 }
 
 .modal-content{
   background: rgb(32,4, 53, 0.95);
-  margin-left: 8%;
-  margin-right: 8%;
+  margin: 5%;
+  margin-right: 16%;
   border-radius: 1em;
   display:flex;
-  flex-direction: row;
+  
   list-style: none; 
-  padding: 1%;
+  
 }
 em{
 margin: 2%;
@@ -171,25 +182,64 @@ font-family: 'Noto Sans Kannada UI';
 font-size: 17px;
 }
 
+
+/*.films-card {
+  background-color: #5a387e;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(190deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+*/
+
 .dataPersonajes{
- background: rgb(32,4, 53, 0.95);
-display: flex;
+  display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
- padding: 1%;
-  align-content:space-between;
- justify-content:flex-start;
- border-radius: 2em ;
+  
+  margin-top: 10%;
+  background: rgba(32, 4, 53, 0.95);
+  border: 5em; 
+  border-radius: 2em;
+  margin-right: 13%;
 }
 .imgPersonajes{
-  position: relative;
-  margin: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 2em;
-  width: 10em;
-  height: 10em;  
-  align-content:space-between;
+   display: flex;
+   border-radius: 2em;
+   
+   width: 15%;
+
 }
 .dataUbicaciones{
 background: rgb(32,4, 53, 0.95);
@@ -200,6 +250,8 @@ display: flex;
   align-content:space-between;
  justify-content: space-evenly;
  border-radius: 2em ;
+ margin: 5%;
+ margin-right: 10%;
 }
 .imgUbicacion {
   display: flex;
@@ -211,18 +263,18 @@ display: flex;
 
 
   
-#section-personaje {
+#section-personajes {
   width: 78%;
   margin-left: 11%;
   background: #441E62;
   border-radius: 18px;
   margin-top: 10%;
-  height:70px;
+  height:40px;
   
   
 }
 
-#section-Historia{
+/*#section-Historia{
   width: 78%;
   margin-left: 11%;
   background: #441E62;
@@ -230,5 +282,5 @@ display: flex;
   margin-top: 8%;
   height:70px;
   text-align: center;
-}
+}*/
 
