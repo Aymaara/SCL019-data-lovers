@@ -1,4 +1,4 @@
-import { filterdatadirector, filterYEar} from './data.js';
+import { filterdatadirector, filterYear, sortBy} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const movies = data.films;
@@ -35,6 +35,7 @@ boxImage(movies);
 const filterdirector= document.getElementById("selectdirector");
 const filterordenAZ= document.getElementById("selectordenAZ");
 const filterxYear = document.getElementById('selectYear');
+const sortYear = document.getElementById("selectorordenyears");
 
 //Modal peliculas
 const modalDataSheet = document.querySelector(".sheetmodal");
@@ -48,8 +49,6 @@ const modalInfoFilms = (movies) =>{
   <div class= "dataSheet"
     <div>
     <img src= ${movies.poster} ${movies.id} class= "modal-content">
-    
- 
    <ul>
      <li> <p1> Película : ${movies.title}</p1> </li><br>
      <li> <p1> Director : ${movies.director}</p1> </li><br>
@@ -101,8 +100,7 @@ filterdirector.addEventListener("change", () => {
   if(filterdirector.value=== "todas"){
   location.reload();
 } 
-
-})
+});
 
 //filtro orden alfabetico
 filterordenAZ.addEventListener("change", () => {
@@ -110,19 +108,28 @@ filterordenAZ.addEventListener("change", () => {
    films=selectorden;
   boxImage(selectorden); 
   modalFilms();
-  if(filterdirector.value=== "todas"){
-    filterordenAZ.reload();
+ // if(filterdirector.value=== "todas"){
+    //filterordenAZ.reload();}
 
-  } 
+  
 });
+
 
 ///filtro años
 filterxYear.addEventListener("change", () => {
-  let selectorYears = filterYEar(movies, filterxYear.value);
+  let selectorYears = filterYear(movies, filterxYear.value);
   films=selectorYears;
   boxImage(selectorYears);
   
   modalFilms();
   
 });
-//
+
+sortYear.addEventListener("change", () => {
+  let selectordenYear = sortBy(movies, sortYear.value);
+   boxImage(selectordenYear);
+   films=selectordenYear;
+  modalFilms();
+ // if(selectordenYear.value=== "Orden por Año"){
+   // modalFilms();}  
+});

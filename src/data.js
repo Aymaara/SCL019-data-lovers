@@ -18,12 +18,29 @@ export const filterdatadirector = (movies, filterdirector, ordenAZ) => {
  return directorGhibli;
   }
 
-export const filterYEar = (movies, filterxYear) => {
+
+export const filterYear = (movies, filterxYear) => {
    let ordenYear = movies.filter(movies => movies.release_date === filterxYear)     
   return ordenYear;
  }
   
 
- 
+ export const sortBy = (movies,sortYear)=>{
+  let sortYears = movies.sort((a,b) => {
+    if (sortYear === "Orden por Año") {
+      return true;
+    }
+  if(sortYear === "Ascendente") {
+   (a.release_date < b.release_date)
+return 1, -1;
+  } 
+  else{
+    (a.release_date > b.release_date)
+    return -1, 1;
+  }
+
+  }); 
+  return sortYears;
+}
 
 
