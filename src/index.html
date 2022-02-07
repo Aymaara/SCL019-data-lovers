@@ -10,9 +10,7 @@
 
 <body>
   <header>
-    <audio controls>
-      <source src="cancion.MP3" type="Audio/MP3">
-    </audio>
+   
     <div class="logo">
       <img src="imagenes/Logostudio.png" alt="home" class="Logostudio">
     </div>
@@ -22,14 +20,17 @@
     <div class="botones">
       <ul>
         <li id="home" class="home"><a>Home</a></li>
-        <li id="peliculas" class="peliculas"><a href="#section-peliculas">Peliculas</a></li>
-        <li id="personajes" class="personajes"><a href="#section-personajes">Personajes</a></li>
+        <li id="peliculas" class="peliculas"><a href="#section-peliculas">Peliculas</a></li> </ul>
+        <audio controls>
+      <source src="cancion.MP3" type="Audio/MP3">
+    </audio>
+       <!-- <li id="personajes" class="personajes"><a href="#section-personajes">Personajes</a></li>
         <li id="history" class="history"><a href="#section-Historia">Historia</a></li>
 
         <div class="Buscar">
           <input type="text" placeholder="Buscar" required>
-        </div>
-      </ul>
+        </div>-->
+      
     </div>
   </header>
 
@@ -52,7 +53,8 @@
 
       <label for="director"></label>
       <select class="selectFilm" id="selectdirector">
-        <option value="todas">todas</option>
+        <option>Directores</option>
+        <option value="todas">Todas</option>
         <option value="Hayao Miyazaki">Hayao Miyazaki</option>
         <option value="Isao Takahata">Isao Takahata</option>
         <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
@@ -64,17 +66,15 @@
 
       <label for="ordenalfa"></label>
       <select class="selectFilm" id="selectordenAZ">
-        <option value="todas">Todas</option>
+        <option>Orden</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
-        
-      
       </select>
 
 
       <label for="year"></label>
       <select class="selectFilm" id="selectYear">
-        <option value="todas">Todas</option>
+        <option>Años</option>
         <option value="1986">1986</option>
         <option value="1989">1989</option>
         <option value="1988">1988</option>
@@ -96,24 +96,26 @@
     </section>
 
     <section>
-      <div class="films" id="films.anime">
-      </div>
+      <div class="films" id="films.anime"></div>
     </section>
-    <section class="selectFilm" id="section-personajes"><a href="#home">Personajes</a>
-    
-      <section class = "sheetmodal" id="sheetmodal"> 
+  
+    <section class = "sheetmodal" id="sheetmodal"> 
       </section>
      
-    </section>
-    <label for="personajes"></label>
+   
+  <!--  <label for="personajes"></label>
     <select class="selectFilm">
       <option></option>
     </select>
-    <section id="section-Historia"><a href="#home">Historia</a>
-    </section>
+      <section class="selectFilm" id="section-personajes"><a href="#home">Personajes</a>
+    
+    <section id="section-Historia"><a href="#home">Historia</a> </section>
+    </section>-->
 
   </main>
-
+  <footer>
+    <h1> "Data Studio Ghibli" - Proyecto realizado por Aymara Guiñez y Karen Escobar - Laboratoria Febrero 2022-.</h1>
+  </footer>
   <script src="main.js" type="module"></script>
 </body>
 

@@ -25,12 +25,5 @@ export const filterYEar = (movies, filterxYear) => {
   
 
  
-//export const ordenYear = movies.sort(function (a, b) {
- // return a.release_date.localeCompare(b.release_date);
-
- //}  
-  //let ordenYear =  movies.sort(movies.release_date === filterxYear(a, b) => {
-    //return a.release_date - b.release_date;
-    // ); }
 
 
