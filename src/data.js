@@ -18,7 +18,7 @@ export const filterdatadirector = (movies, filterdirector, ordenAZ) => {
  return directorGhibli;
   }
 
-export const filterYEar = (movies, filterxYear) => {
+export const filterYear = (movies, filterxYear) => {
    let ordenYear = movies.filter(movies => movies.release_date === filterxYear)     
   return ordenYear;
  }

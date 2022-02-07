@@ -22,10 +22,10 @@ body{
  width: 24%;
 }
 audio {
-  margin-top: 1%;
-  margin-left: 10%;
-  height: 20px;
-  width: 103px;
+  margin-top: 2%;
+  margin-left: 50%;
+  height: 3em;
+  width: 10em;
   
 }
 .botones{ 
@@ -39,11 +39,10 @@ audio {
 
  ul {
     
-    display: flex;
     list-style: none; 
     padding-top:0%;
   } 
- 
+  
   a {
     color: #fff;
     padding: 30px;
@@ -54,15 +53,6 @@ audio {
     color: rgb(125, 154, 180);
     transition: 0.5s;
   }
-
-.Buscar input{
-  display:flex;
-  width: 57%;
-  height: 80%;
-  border-radius: 18px;
-  margin-left: 50%;
-  margin-left: 35%;
-}
 
 .img1{
 
@@ -80,8 +70,7 @@ border: 10px solid rgb(32,4, 53, 0.95);
   left: 25%;
   margin-top: 4%;
   background: rgba(32, 4, 53, 0.95);
-  border-radius: 18px;
-  
+  border-radius: 18px; 
 }
 
 p{
@@ -93,10 +82,11 @@ font-size: 21px;
 }
 
 p1{
- 
+  margin-left: 4%;
   color: white;
   font-family: 'Noto Sans Kannada UI';
-  font-size: 17px;
+  font-size: 18px;
+ 
   }
 
 #section-peliculas{
@@ -121,166 +111,126 @@ p1{
   border-radius: 18px;
   margin: 10%;
   margin-top: 5%;
-  perspective: 1000px; 
+   
   
 }
+
 .selectFilm{
   border-radius: 10em;
   margin-left: 13%;
   margin-top: 3%;
-  transform-style: preserve-3d;
   transition: transform 0.8s;
 }
 .containerCard {
   margin: 2%;
   display: flex;
-
-  
 }   
 
 .containerCard:hover {
-  background: rgb(65, 39, 78);
+  
   cursor: pointer;
   transition: 1s;
-  transform: rotateY(180deg);
-  
- 
+  transform: scale(1.1);
 }
 
-.containerPoster{
-  
-  backface-visibility: hidden;
-}
-/*.containerCard, .containerPoster {
-  display:flex;
-  width: 100%;
-  height: 100%;
-  
- 
-}*/
 .poster {
   display: flex;
   border-radius: 2em; 
 
 }
 
-.modal-content{
-  background: rgb(32,4, 53, 0.95);
-  margin: 5%;
-  margin-right: 16%;
-  border-radius: 1em;
-  display:flex;
-  
-  list-style: none; 
-  
-}
-em{
-margin: 2%;
-text-align: justify;
-color: white;
-font-family: 'Noto Sans Kannada UI';
-font-size: 17px;
-}
-
-
-/*.films-card {
-  background-color: #5a387e;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; 
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(190deg);
-}
-
-
-.flip-card-front, .flip-card-back {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-}
-
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-*/
-
-.dataPersonajes{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  margin-top: 10%;
-  background: rgba(32, 4, 53, 0.95);
-  border: 5em; 
-  border-radius: 2em;
-  margin-right: 13%;
-}
 .imgPersonajes{
-   display: flex;
-   border-radius: 2em;
-   
-   width: 15%;
-
-}
-.dataUbicaciones{
-background: rgb(32,4, 53, 0.95);
-display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
- padding: 1%;
-  align-content:space-between;
- justify-content: space-evenly;
- border-radius: 2em ;
- margin: 5%;
- margin-right: 10%;
-}
-.imgUbicacion {
+  position: relative;
+  margin: 2%;
   display: flex;
-  border-radius: 2em;
+  flex-wrap: wrap;
+  border-radius: 1em;
+  width: 10em;
+  height: 10em;  
+  align-content:space-between;
+}
+
+.imgUbicacion {
+  position: relative;
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1em;
   width: 10em;
   height: 10em;
 }
 
-
-
-  
-#section-personajes {
-  width: 78%;
-  margin-left: 11%;
-  background: #441E62;
-  border-radius: 18px;
-  margin-top: 10%;
-  height:40px;
-  
-  
+#myImg {
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/*#section-Historia{
-  width: 78%;
-  margin-left: 11%;
-  background: #441E62;
-  border-radius: 18px;
-  margin-top: 8%;
-  height:70px;
-  text-align: center;
-}*/
+#myImg:hover {
+  opacity: 0.7;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  padding-top: 50px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+.dataUbicaciones{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3%;
+  align-content:space-between;
+  padding-bottom: 5%;
+}
+.marginUbic{
+  display :grid;
+  margin:2em;
+}
+.dataSheet{
+  padding: 1%;
+  display: flex;
+
+}
+.dataPersonajes{
+ 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0%;
+  align-content:space-between;
+
+ 
+}
+.marginPerso{
+  display :grid;
+  margin:2em;
+}
+.modal-content{
+  margin-left: 8%;
+  height: 18em;
+  border-radius: 1em;
+  padding: 1%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 

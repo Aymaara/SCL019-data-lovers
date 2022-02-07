@@ -1,14 +1,14 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterdatadirector, filterYear } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterdatadirector', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterdatadirector).toBe('function');
   });
 
-  it('returns `example`', () => {
+ /* it('returns `example`', () => {
     expect(example()).toBe('example');
-  });
+  });*/
 });
 
 
