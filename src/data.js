@@ -15,6 +15,7 @@ export const filterdatadirector = (movies, filterdirector, ordenAZ) => {
         return -1, 1;
       }
     });
+    
  return directorGhibli;
   }
 
