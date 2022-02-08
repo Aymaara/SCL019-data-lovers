@@ -1,21 +1,17 @@
 # Data Lovers Studio Ghibli
 
-# Studio Ghibli
+# Studio Ghibli 
+https://escobark21.github.io/SCL019-data-lovers/src/index.html
+
 
 Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
 animados como **Mi vecino Totoro**, **El viaje de Chihiro** o
 **El castillo ambulante**, entre otros grandes éxitos.
 
-<<<<<<< HEAD
 Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
 varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
 interactuar y ver la información de las animaciones y sus personajes.
-=======
-***![Screenshot 2022-02-08 at 12-36-39 Figma](https://user-images.githubusercontent.com/94982405/153032051-965c66fd-30ec-4e97-8209-c64fede0d79a.png)
-![Screenshot 2022-02-08 at 12-36-22 Figma](https://user-images.githubusercontent.com/94982405/153032063-9a6141f2-63e6-46c6-9337-3c8902b30919.png)
-![Screenshot 2022-02-08 at 12-34-16 Figma](https://user-images.githubusercontent.com/94982405/153032071-6a022319-a75c-40ad-8934-1c040a12daa2.png)
 
->>>>>>> bd187c4dabaa5252dddceda219f9fa9ae2f17beb
 
 ## Hallazgos
 
@@ -65,15 +61,17 @@ Nuestros familiares y amistades consultados por la interfaz nos indicaron que pr
 
 
 
-
 #### Prototipo de alta fidelidad
 
 Prototipo en Figma
 
 Página principal
+![Screenshot 2022-02-08 at 12-36-22 Figma](https://user-images.githubusercontent.com/94982405/153032063-9a6141f2-63e6-46c6-9337-3c8902b30919.png)
 
 Página que muestra las películas
+![Screenshot 2022-02-08 at 12-36-39 Figma](https://user-images.githubusercontent.com/94982405/153032051-965c66fd-30ec-4e97-8209-c64fede0d79a.png)
 
 Página modal
+![Screenshot 2022-02-08 at 12-34-16 Figma](https://user-images.githubusercontent.com/94982405/153032071-6a022319-a75c-40ad-8934-1c040a12daa2.png)
 
 
