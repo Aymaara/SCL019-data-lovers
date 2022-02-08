@@ -66,12 +66,17 @@ Nuestros familiares y amistades consultados por la interfaz nos indicaron que pr
 Prototipo en Figma
 
 Página principal
+
 ![Screenshot 2022-02-08 at 12-36-22 Figma](https://user-images.githubusercontent.com/94982405/153032063-9a6141f2-63e6-46c6-9337-3c8902b30919.png)
 
+
 Página que muestra las películas
+
 ![Screenshot 2022-02-08 at 12-36-39 Figma](https://user-images.githubusercontent.com/94982405/153032051-965c66fd-30ec-4e97-8209-c64fede0d79a.png)
 
+
 Página modal
+
 ![Screenshot 2022-02-08 at 12-34-16 Figma](https://user-images.githubusercontent.com/94982405/153032071-6a022319-a75c-40ad-8934-1c040a12daa2.png)
 
 
