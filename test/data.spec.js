@@ -51,4 +51,9 @@ describe('filterYear', () => {
     expect(resultado[0].title).toBe('Castle in the Sky');
     expect(resultado[0].release_date).toBe('1986');
   });
+  it('deberia dar el resultado de el año', () => {
+    let resultado=filterYear (datatest,"1994")
+    expect(resultado[0].title).toBe('Pom Poko');
+    expect(resultado[0].release_date).toBe('1994');
+  });
 });

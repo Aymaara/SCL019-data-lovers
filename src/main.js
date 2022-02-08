@@ -132,6 +132,5 @@ sortYear.addEventListener("change", () => {
    boxImage(selectordenYear);
    films=selectordenYear;
   modalFilms();
- // if(selectordenYear.value=== "Orden por Año"){
-   // modalFilms();}  
+  
 });
