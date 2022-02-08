@@ -12,7 +12,10 @@
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 * [9. Checklist](#9-checklist)
 
-***
+***![Screenshot 2022-02-08 at 12-36-39 Figma](https://user-images.githubusercontent.com/94982405/153032051-965c66fd-30ec-4e97-8209-c64fede0d79a.png)
+![Screenshot 2022-02-08 at 12-36-22 Figma](https://user-images.githubusercontent.com/94982405/153032063-9a6141f2-63e6-46c6-9337-3c8902b30919.png)
+![Screenshot 2022-02-08 at 12-34-16 Figma](https://user-images.githubusercontent.com/94982405/153032071-6a022319-a75c-40ad-8934-1c040a12daa2.png)
+
 
 ## 1. Preámbulo
 
