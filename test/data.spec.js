@@ -13,13 +13,13 @@ describe('filterdatadirector', () => {
   });
 });
 
-
+const años = datatest.relase_data;
 describe('filterYear', () => {
   it('is a function', () => {
     expect(typeof filterYear).toBe('function');
   });
 
- /* it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });*/
+  it('deberia return ordenYear cuando el usurio seleccione 2013 ', () => {
+    expect(filterYear(datatest, "2013",)).toBe('ordenYear');
+  });
 });
