@@ -7,17 +7,21 @@ export const filterdatadirector = (movies, filterdirector, ordenAZ) => {
         return true;
       }
       if (ordenAZ === "A-Z") {
-        (a.title.toLowerCase() < b.title.toLowerCase())
-        return 1, -1;
-      }
+       if (a.title.toLowerCase() < b.title.toLowerCase())
+        return -1;
       else {
-        (a.title.toLowerCase() > b.title.toLowerCase())
-        return -1, 1;
-      }
+        return  1;
+      }}
+      if (ordenAZ === "Z-A") {
+       if (a.title.toLowerCase() > b.title.toLowerCase())
+        return -1;
+      else {
+        return  1;
+      }}
     });
+    
  return directorGhibli;
   }
-
 
 export const filterYear = (movies, filterxYear) => {
    let ordenYear = movies.filter(movies => movies.release_date === filterxYear)     
@@ -42,5 +46,4 @@ return 1, -1;
   }); 
   return sortYears;
 }
-
-
+//mira

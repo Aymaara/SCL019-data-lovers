@@ -93,12 +93,14 @@ modalFilms();
  
 //filtro director
 filterdirector.addEventListener("change", () => {
-  let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value);  
+  let selectedDirect = filterdatadirector(movies, filterdirector.value,filterordenAZ.value); 
+  console.log(selectedDirect) ;
   boxImage(selectedDirect);
   films=selectedDirect;
   modalFilms(); 
   if(filterdirector.value=== "todas"){
   location.reload();
+  
 } 
 });
 
@@ -130,6 +132,5 @@ sortYear.addEventListener("change", () => {
    boxImage(selectordenYear);
    films=selectordenYear;
   modalFilms();
- // if(selectordenYear.value=== "Orden por Año"){
-   // modalFilms();}  
+  
 });
