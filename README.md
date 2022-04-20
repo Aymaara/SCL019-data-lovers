@@ -1,6 +1,8 @@
 # Data Lovers Studio Ghibli
 
 # Studio Ghibli 
+
+https://aymaara.github.io/SCL019-data-lovers/src/index.html
 https://escobark21.github.io/SCL019-data-lovers/src/index.html
 
 
