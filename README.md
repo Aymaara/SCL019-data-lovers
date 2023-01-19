@@ -3,7 +3,7 @@
 # Studio Ghibli 
 
 https://aymaara.github.io/SCL019-data-lovers/src/index.html
-https://escobark21.github.io/SCL019-data-lovers/src/index.html
+
 
 
 Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
